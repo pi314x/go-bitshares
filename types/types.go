@@ -136,6 +136,41 @@ const (
 	OperationTypeExecuteBid                                                 ///46
 )
 
+// Operations added after BitShares core v3 (not in go-bitshares v0.6.0).
+const (
+	OperationTypeAssetClaimPool         OperationType = iota + 47 //47
+	OperationTypeAssetUpdateIssuer                                 //48
+	OperationTypeHTLCCreate                                        //49
+	OperationTypeHTLCRedeem                                        //50
+	OperationTypeHTLCRedeemed                                      ///51 virtual
+	OperationTypeHTLCExtend                                        //52
+	OperationTypeHTLCRefund                                        ///53 virtual
+	OperationTypeCustomAuthorityCreate                             //54
+	OperationTypeCustomAuthorityUpdate                             //55
+	OperationTypeCustomAuthorityDelete                             //56
+	OperationTypeTicketCreate                                      //57
+	OperationTypeTicketUpdate                                      //58
+	OperationTypeLiquidityPoolCreate                               //59
+	OperationTypeLiquidityPoolDelete                               //60
+	OperationTypeLiquidityPoolDeposit                              //61
+	OperationTypeLiquidityPoolWithdraw                             //62
+	OperationTypeLiquidityPoolExchange                             //63
+	OperationTypeSametFundCreate                                   //64
+	OperationTypeSametFundDelete                                   //65
+	OperationTypeSametFundUpdate                                   //66
+	OperationTypeSametFundBorrow                                   //67
+	OperationTypeSametFundRepay                                    //68
+	OperationTypeCreditOfferCreate                                 //69
+	OperationTypeCreditOfferDelete                                 //70
+	OperationTypeCreditOfferUpdate                                 //71
+	OperationTypeCreditOfferAccept                                 //72
+	OperationTypeCreditDealRepay                                   //73
+	OperationTypeCreditDealExpired                                 ///74 virtual
+	OperationTypeLiquidityPoolUpdate                               //75
+	OperationTypeCreditDealUpdate                                  //76
+	OperationTypeLimitOrderUpdate                                  //77
+)
+
 func (p OperationType) OperationName() string {
 	return fmt.Sprintf("%sOperation", p.String()[13:])
 }
@@ -166,6 +201,14 @@ const (
 	ObjectTypeVestingBalance
 	ObjectTypeWorker
 	ObjectTypeBalance
+	// Protocol objects added after BitShares core v3.
+	ObjectTypeHTLC              // 16 — 1.16.x
+	ObjectTypeCustomAuthority   // 17 — 1.17.x
+	ObjectTypeTicket            // 18 — 1.18.x
+	ObjectTypeLiquidityPool     // 19 — 1.19.x
+	ObjectTypeSametFund         // 20 — 1.20.x
+	ObjectTypeCreditOffer       // 21 — 1.21.x
+	ObjectTypeCreditDeal        // 22 — 1.22.x
 )
 
 // for SpaceTypeImplementation
