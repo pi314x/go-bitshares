@@ -16,9 +16,8 @@ var (
 )
 
 const (
-	limit = 100
-	//wsFullApiUrl = "wss://bitshares.openledger.info/ws"
-	wsFullApiUrl = "wss://node.market.rudex.org"
+	limit        = 100
+	wsFullApiUrl = "wss://node.xbts.io/ws"
 )
 
 func main() {

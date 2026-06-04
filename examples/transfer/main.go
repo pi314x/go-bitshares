@@ -23,7 +23,7 @@ var (
 )
 
 const (
-	wsTestApiUrl = "wss://node.testnet.bitshares.eu/ws"
+	wsTestApiUrl = "wss://testnet.xbts.io/ws"
 )
 
 func init() {

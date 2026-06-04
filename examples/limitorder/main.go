@@ -22,7 +22,7 @@ var (
 )
 
 const (
-	wsFullApiUrl = "wss://bitshares.openledger.info/ws"
+	wsFullApiUrl = "wss://node.xbts.io/ws"
 )
 
 func init() {

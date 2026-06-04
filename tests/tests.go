@@ -14,10 +14,8 @@ import (
 )
 
 const (
-	//WsFullApiUrl = "wss://node.market.rudex.org"
-	//WsFullApiUrl = "wss://api.bts.blckchnd.com"
-	WsFullApiUrl  = "wss://bitshares.openledger.info/ws"
-	WsTestApiUrl  = "wss://node.testnet.bitshares.eu/ws"
+	WsFullApiUrl  = "wss://node.xbts.io/ws"      // mainnet
+	WsTestApiUrl  = "wss://testnet.xbts.io/ws"   // testnet
 	RpcFullApiUrl = "http://localhost:8095"
 	RpcTestApiUrl = "http://localhost:8094"
 )
